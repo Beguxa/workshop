@@ -1,0 +1,19 @@
+@font-face
+{
+	font-family:header-font;
+	src : url(/assets/fonts/fontawesome-webfont.ttf);
+}
+
+.myBookBackground
+{
+	background-image : url("/assets/images/Open-Book.jpg");
+	background-size : cover;
+	background-position : -10%;
+	background-attachment:fixed;
+	
+}
+
+.myText
+{
+	font-family:header-font;
+}

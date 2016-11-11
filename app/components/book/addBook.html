@@ -1,0 +1,69 @@
+<div class="row  myPadding">
+	<h2 class="col-md-6 col-md-offset-3">Book Form</h4>
+</div>
+<div class="row">
+<div class="col-md-8 col-md-offset-2 myBorder myPadding">
+<form class="form-horizontal" name="myForm">
+    
+	<div class="form-group">
+        <label class="control-label col-md-3"> ISBN </label>
+        <div class="col-md-6">
+            <input class="form-control" ng-model="book.isbn" placeholder="ISBN" name="isbn" required ng-disabled="disable"/>
+        </div>
+    </div>
+	
+    <div class="form-group">
+        <label class="control-label col-md-3"> Book Title</label>
+        <div class="col-md-6">
+            <input class="form-control" ng-model="book.title" placeholder="Book Title" name="title"/>
+        </div>
+    </div>
+	
+    <div class="form-group">
+        <label class="control-label col-md-3"> Book Author </label>
+        <div class="col-md-6">
+            <input class="form-control" ng-model="book.author" ng-change="search('author')" placeholder="Book Author" name="author"/>
+            
+        </div>
+    </div>
+    
+    <div class="form-group">   
+        <label class="control-label col-md-3"> Book Price</label>
+        <div class="col-md-6">
+            <input type="number" class="form-control" ng-model="book.price" placeholder="Book Price" name="price"/>
+        </div>
+    </div>
+	
+    <div class="form-group">    
+        <label class="control-label col-md-3"> Available on</label>
+        <div class="col-md-6">
+            <!-- <textArea class="form-control" ng-model="book.availableOn" type="text" name="availableOn"></textArea> -->
+			<label class="checkbox col-md-6" ng-repeat="i in avail"><input type="checkbox" ng-model="i.value" value="Option 1">{{i.name}}</label>
+        </div>
+    </div>    
+      <!-- <div class="form-group"> 
+<label class="control-label col-md-3"> Available on</label>	  
+	
+  <label class="checkbox col-md-6"><input ng-model="c" ng-click="check()" type="checkbox" value="Option 1"></label>
+
+
+  <label class="checkbox col-md-6 col-md-offset-3"><input ng-model="book.availableOn[1]" type="checkbox" value="Option 2">Option 2</label>
+
+  <label class="checkbox col-md-6 col-md-offset-3"><input ng-model="book.availableOn[2]" type="checkbox" value="Option 3">Option 3</label>
+
+	   </div> -->
+	   
+	   
+    <div class="form-group">    
+        <div class="col-md-offset-3 col-md-4">
+            <input class="btn btn-primary" type="submit" ng-click="submit()" value="Submit"/>
+        </div>
+        <div class="col-md-offset-3 col-md-2">
+            <button class="btn btn-primary" ng-click="delete()" ng-show="editForm">Delete</button>
+        </div>
+    </div>
+       
+       
+</form>
+</div>
+</div>

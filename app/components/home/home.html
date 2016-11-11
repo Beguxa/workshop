@@ -1,0 +1,41 @@
+				<div class="row  myPadding myHeader">
+					<h1 class="col-md-2 col-md-offset-4">LIBRARY</h1>
+					<h1 class="col-md-4">&nbspMANAGEMENT</h1>
+				</div>
+				<div class="row  myPadding">
+				<a class="btn btn-primary col-md-3 col-md-offset-1" href="#addAuthor">Add Author</a>
+				<a class="btn btn-primary col-md-3 col-md-offset-4" href="#addBook">Add Book</a>
+				</div>
+				
+				<div class="row  myPadding">
+				<div class="col-md-10 col-md-offset-1">
+				<div class="row myPadding">
+                        <div class="input-group stylish-input-group">
+                            <input class="form-control" ng-model="searchContent" ng-change="search()" placeholder="Enter Book Title"/>
+                            <span class="input-group-addon" ng-click="search()">
+                                <a href="" class="myAnchor">Search</a>
+							</span>
+						</div>
+				</div>
+				<table class="table table-hover table-responsive myPadding">
+					<thead>
+						<tr class="myText">
+							<th>ISBN</th>
+							<th>Title</th>
+							<th>Author</th>
+							<th>Price</th>
+							<th>AvailableOn</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="x in myWelcome">
+							<td><a class="myAnchor" href="#editBook/{{x}}">{{x.isbn}}</a></td>
+							<td>{{x.title}}</td>
+							<td><a class="myAnchor" href="#x/{{x.author}}">{{x.author}}</a></td>
+							<td>{{x.price}}</td>
+							<td>{{x.availableOn | formatArray}}</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				</div>
